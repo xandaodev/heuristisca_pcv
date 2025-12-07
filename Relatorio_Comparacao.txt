@@ -1,0 +1,35 @@
+Alexandre Vital Demolinari Pereira
+Matricula: 2024023695
+
+RELATÓRIO DE COMPARAÇÃO: 
+
+Comparando o desempenho de uma heuristica clássica gulosa (insercao do vizinho mais proximo) contra a meta-heuristica de otimizaçao por colonia de formigas (ant system) na resolução do Problema do Caixeiro Viajante.
+
+2. INSTÂNCIA ANALISADA
+- Arquivo: SGB128_dist.txt
+- Tamanho: 128 cidades
+
+3. RESULTADOS:
+
+A) heuristica de inserçao mais proxima
+   - Método: Construtivo determinístico (Gulosa)
+   - Distancia Final Encontrada: 35.081,0
+   - Tempo de Execução: milissegundos
+
+B) Ant System - otimizaçao por colonia de formigas
+   - Metodo: Meta-heuristica probabilística utlizando feromonios para aprender caminhos melhores
+   - Melhor Distancia Encontrada: 20.214,0
+   - Tempo de Execução: alguns bons minutos
+
+4. ANÁLISE COMPARATIVA
+
+- Diferença Absoluta: 35.081 - 20.214 = 14.867 unidades de distância.
+- Diferença Relativa: a solução da heuristica simples é aproximadamente 73,5% pior (maior) do que a melhor soluçao encontrada pelas formigas.
+
+5. CONCLUSÃO:
+
+1. Sobre o tamanho do problema: deu pra perceber claramente a diferença de desempenho. No caso menor (LAU15), a heurística simples não foi tão mal, ficando cerca de 24% pior que o ótimo. Mas quando fomos pro SGB128, que é maior, a diferença foi pra aproximadamente 73%. isso mostra na prática que, conforme o problema fica mais complexo, essas soluções mais simples quebram e perdem muita qualidade.
+
+2. O jeito de resolver: A heurística de inserção nao é tao inteligente: ela toma a decisão que parece melhor naquele momento, sem pensar no futuro, e por isso acaba presa em soluções ruins (travou em 35.081). ja o Ant System é mais esperto: usando o feromônio, as formigas conseguem "aprender" e escapar desses caminhos ruins, chegando num resultado muito melhor (20.214).
+
+Resumo: Apesar de demorar bem mais pra rodar, usar a inteligência das formigas e feromonios vale muito a pena em problemas grandes e difíceis como esse, porque a diferença na qualidade da resposta final é absurda.

@@ -5,8 +5,8 @@ public class HeuristicaInsercao{
     public static void main(String[] args){
         //utilizei a base do trabalho e a classe Pcv para fazer essa atividade, facilitando assim tambem a comparaçao de resultados
 
-        //String arquivo = "SGB128_dist.txt"; 
-        String arquivo = "LAU15_dist.txt"; 
+        String arquivo = "SGB128_dist.txt"; 
+        //String arquivo = "LAU15_dist.txt"; 
         Pcv pcv = new Pcv(0);
         pcv.lerArquivo(arquivo);
         
